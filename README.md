@@ -15,6 +15,7 @@ A class object that handles [parameters](https://github.com/FadedJayden/Table_So
 Sorts array `x`, will exclude non numeric datatypes, use [Deep Sort](https://github.com/FadedJayden/Table_Sort/blob/main/README.md#deepsortx) to include arrays.
 Only takes in 1 parameter.
 No changes will be made to `x` within the module.
+Skips `nil`, won't be added into returned list regardless of `IncludeNonSorted`.
 
 #### `:DeepSort(x)`
 Sorts array `x` along with nested arrays.
@@ -23,6 +24,7 @@ All nested arrays would be pushed to the very back.
 Won't sort non numeric datatypes.
 Only takes in 1 parameter.
 No changes will be made to `x` within the module.
+Skips `nil`, won't be added into returned list regardless of `IncludeNonSorted`.
 
 ### Parameters
 ##### Algorithm
@@ -123,4 +125,8 @@ print(sortedDeepArray) -- {1, 3, 30, 41, {0, 1, 3, 34, {5, 10, 64}}, {5, 10, 10,
 ```
 
 ## Error Codes
-For your troubleshooting needs.
+For your troubleshooting needs.\
+**`108`** - Invalid [SorterObj](https://github.com/FadedJayden/Table_Sort/blob/main/README.md#sorterobj)'s parameters.\
+**`350`** - Not a fatal error, provided [type](https://github.com/FadedJayden/Table_Sort/blob/main/README.md#type) property of SorterObj does not match the given table.\
+**`349`** - [SorterObj.Type](https://github.com/FadedJayden/Table_Sort/blob/main/README.md#type) is not a valid option.\
+**`801`** - Amount of checks reached [MaxRetries](https://github.com/FadedJayden/Table_Sort/blob/main/README.md#maxretries). Contact me if this happens.
