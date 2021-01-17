@@ -64,6 +64,7 @@ When set to true, it will pack all of the non numerical datatypes from the given
 ## Stats
 **Algorithm 1; Heap Sort**
 - Avg time: 0.03131ms\
+
 **Algorithm 2; Insertion Sort**
 - Avg time: 0.03652ms
 
