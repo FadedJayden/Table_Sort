@@ -47,7 +47,6 @@ local function insertionsort(array, ascend)
 		end
 		if not found then
 			table.insert(solidified, v)
-			print("- "..solidified[1])
 		end
 	end
 	if not ascend then
@@ -92,7 +91,7 @@ local function check(array, ascend)
 end
 
 local function checkSorterObj(obj)
-	if type(obj.Type) ~= "number" or obj.Type ~= (1 or 2) then
+	if type(obj.Type) ~= "number" or not(obj.Type == 1 or obj.Type == 2) then
 		error("SorterObj.Type can only be 1 or 2. 108-1")
 	elseif type(obj.Algorithm) ~= "number" or obj.Algorithm <= 0 or obj.Algorithm >= 3 then
 		error("SorterObj.Algorithm value inproper. 108-2")
@@ -133,7 +132,6 @@ local function determineTable(t)
 	for _, _ in pairs(t) do
 		t_length += 1
 	end
-
 	local array = true
 	local dict = true
 	for index, _ in pairs(t) do
@@ -141,6 +139,8 @@ local function determineTable(t)
 			array = false
 		elseif type(index) == "number" and index%1 == 0 and index <= t_length and index > 1 then
 			dict = false
+		elseif type(index) == "number" and index > t_length then
+			array = false		
 		end
 	end
 
@@ -177,7 +177,6 @@ function module:Sort(t)
 	local newArray = {}
 	local miscArray = {}
 	if self.Type == 2 then
-		local newArray = {}
 		if self.SortKeys then
 			for k, _ in pairs(t) do
 				if type(k) == "number" then
@@ -222,7 +221,7 @@ function module:Sort(t)
 	if self.Checks then
 		for i = 1, self.MaxRetries do
 			sortedArray = sortChannel(newArray, self.Ascending, self.Type)
-			local err = check(newArray, self.Ascending)
+			local err = check(sortedArray, self.Ascending)
 			if not err then
 				break
 			elseif i == self.MaxRetries then
