@@ -71,7 +71,7 @@ When set to true, it will pack all of the non numerical datatypes from the given
 **Algorithm 2; Insertion Sort**
 - Avg time: 0.03652ms
 
-## Code sample
+## Code samples
 ```lua
 local sorter = require(script.Parent:WaitForChild("ModuleScript"))
 
