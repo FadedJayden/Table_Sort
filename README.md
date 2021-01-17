@@ -11,13 +11,15 @@ It currently features 2 sorting algorithms, **insertion sort** and **heap sort**
 Creates and return a [SorterObj](https://github.com/FadedJayden/Table_Sort/blob/main/README.md#sorterobj).
 ## SorterObj
 A class object that handles [parameters](https://github.com/FadedJayden/Table_Sort#parameters) when sorting.
-#### :Sort(x)
+#### `:Sort(x)`
 Sorts array `x`, will exclude non numeric datatypes, use [Deep Sort](https://github.com/FadedJayden/Table_Sort/blob/main/README.md#deepsortx) to include arrays.
+Only takes in 1 parameter.
 
-#### :DeepSort(x)
+#### `:DeepSort(x)`
 Sorts array `x` along with nested arrays.
 Uses a recursive function to sort all of the numerical data within all of nested arrays.
 Won't sort non numeric datatypes.
+Only takes in 1 parameter.
 
 ### Parameters
 ##### Algorithm
