@@ -8,18 +8,18 @@ It currently features 2 sorting algorithms, **insertion sort** and **heap sort**
 
 ## API
 ##### Module.new()
-Creates and return a [SorterObj](https://github.com/FadedJayden/Table_Sort#SorterObj).
-### SorterObj
+Creates and return a [SorterObj](https://github.com/FadedJayden/Table_Sort/blob/main/README.md#sorterobj).
+## SorterObj
 A class object that handles [parameters](https://github.com/FadedJayden/Table_Sort#parameters) when sorting.
-##### :Sort(x)
-Sorts array `x`, will exclude non numeric datatypes, use [Deep Sort](https://github.com/FadedJayden/Table_Sort#DeepSort) to include arrays.
+#### :Sort(x)
+Sorts array `x`, will exclude non numeric datatypes, use [Deep Sort](https://github.com/FadedJayden/Table_Sort/blob/main/README.md#deepsortx) to include arrays.
 
-##### :DeepSort(x)
+#### :DeepSort(x)
 Sorts array `x` along with nested arrays.
 Uses a recursive function to sort all of the numerical data within all of nested arrays.
 Won't sort non numeric datatypes.
 
-#### Parameters
+### Parameters
 ##### Algorithm
 Datatype: `number`
 Default: `1`
@@ -36,7 +36,7 @@ Determines the amount of times to retries when checking of ordered array fails.
 Datatype: `boolean`
 Default: `true`
 Determine whether to check the sorted array.
-Uses [MaxRetries]()
+Uses [MaxRetries](https://github.com/FadedJayden/Table_Sort/blob/main/README.md#maxretries)
 
 ##### Ascending
 Datatype: `boolean`
