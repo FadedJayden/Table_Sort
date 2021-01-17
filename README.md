@@ -25,7 +25,7 @@ Only takes in 1 parameter.
 ##### Algorithm
 Datatype: `number`\
 Default: `1`\
-Determines the sorting algorithm used.
+Determines the sorting algorithm used.\
 1 - Heap Sort
 2 - Insertion Sort
 
