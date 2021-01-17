@@ -26,46 +26,46 @@ Only takes in 1 parameter.
 Datatype: `number`\
 Default: `1`\
 Determines the sorting algorithm used.
-1 - Heap Sort\
-2 - Insertion Sort\
+1 - Heap Sort
+2 - Insertion Sort
 
 ##### MaxRetries
 Datatype: `number`\
 Default: `5`\
-Determines the amount of times to retries when checking of ordered array fails.\
+Determines the amount of times to retries when checking of ordered array fails.
 
 ##### Checks
 Datatype: `boolean`\
 Default: `true`\
 Determine whether to check the sorted array.\
-Uses [MaxRetries](https://github.com/FadedJayden/Table_Sort/blob/main/README.md#maxretries)\
+Uses [MaxRetries](https://github.com/FadedJayden/Table_Sort/blob/main/README.md#maxretries)
 
 ##### Ascending
 Datatype: `boolean`\
 Default: `true`\
-Whether to sort the given array in ascending order.\
+Whether to sort the given array in ascending order.
 
 ##### Type
 Datatype: `number`\
 Default: `1`\
-Type of table, 1 -- array; 2 -- dictionary.\
+Type of table, 1 -- array; 2 -- dictionary.
 
 ##### SortKeys
 Datatype: `boolean`\
 Default: `false`\
 Only applicable when sorting a dictionary,\
-Instead of sorting the values of the dictionary, it sorts the keys.\
+Instead of sorting the values of the dictionary, it sorts the keys.
 
 ##### IncludeNonSorted
 Datatype: `boolean`\
 Default: `false`\
-When set to true, it will pack all of the non numerical datatypes from the given list at the very end of the returned list.\
+When set to true, it will pack all of the non numerical datatypes from the given list at the very end of the returned list.
 
 ## Stats
-**Algorithm 1; Heap Sort**\
-- Avg time: 0.03131ms\
-**Algorithm 2; Insertion Sort**\
-- Avg time: 0.03652ms\
+**Algorithm 1; Heap Sort**
+- Avg time: 0.03131ms
+**Algorithm 2; Insertion Sort**
+- Avg time: 0.03652ms
 
 ## Error Codes
 For your troubleshooting needs.
