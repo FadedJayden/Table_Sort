@@ -216,7 +216,7 @@ function module:Sort(t)
 			end
 		end
 	else
-		error("SorterObj.Type is neither 1 or 2. 609")
+		error("SorterObj.Type is neither 1 or 2. 349")
 	end
 	local sortedArray = {}
 	if self.Checks then
@@ -226,7 +226,7 @@ function module:Sort(t)
 			if not err then
 				break
 			elseif i == self.MaxRetries then
-				warn("Check failed and hit max retry limit. 102")
+				warn("Check failed and hit max retry limit. 801")
 			end
 		end
 	else
