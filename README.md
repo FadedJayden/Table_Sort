@@ -10,7 +10,7 @@ It currently features 2 sorting algorithms, **insertion sort** and **heap sort**
 ##### Module.new()
 Creates and return a [SorterObj](https://github.com/FadedJayden/Table_Sort#SorterObj).
 ### SorterObj
-A class object that handles [parameters](https://github.com/FadedJayden/Table_Sort#SorterObj-Parameters) when sorting.
+A class object that handles [parameters](https://github.com/FadedJayden/Table_Sort#parameters) when sorting.
 ##### :Sort(x)
 Sorts array `x`, will exclude non numeric datatypes, use [Deep Sort](https://github.com/FadedJayden/Table_Sort#DeepSort) to include arrays.
 
