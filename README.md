@@ -12,18 +12,18 @@ Creates and return a [SorterObj](https://github.com/FadedJayden/Table_Sort/blob/
 ## SorterObj
 A class object that handles [parameters](https://github.com/FadedJayden/Table_Sort#parameters) when sorting.
 #### `:Sort(x)`
-Sorts array `x`, will exclude non numeric datatypes, use [Deep Sort](https://github.com/FadedJayden/Table_Sort/blob/main/README.md#deepsortx) to include arrays.
-Only takes in 1 parameter.
-No changes will be made to `x` within the module.
+Sorts array `x`, will exclude non numeric datatypes, use [Deep Sort](https://github.com/FadedJayden/Table_Sort/blob/main/README.md#deepsortx) to include arrays.\
+Only takes in 1 parameter.\
+No changes will be made to `x` within the module.\
 Skips `nil`, won't be added into returned list regardless of `IncludeNonSorted`.
 
 #### `:DeepSort(x)`
-Sorts array `x` along with nested arrays.
-Uses a recursive function to sort all of the numerical data within all of nested arrays.
-All nested arrays would be pushed to the very back.
-Won't sort non numeric datatypes.
-Only takes in 1 parameter.
-No changes will be made to `x` within the module.
+Sorts array `x` along with nested arrays.\
+Uses a recursive function to sort all of the numerical data within all of nested arrays.\
+All nested arrays would be pushed to the very back.\
+Won't sort non numeric datatypes.\
+Only takes in 1 parameter.\
+No changes will be made to `x` within the module.\
 Skips `nil`, won't be added into returned list regardless of `IncludeNonSorted`.
 
 ### Parameters
