@@ -37,7 +37,7 @@ Determines the sorting algorithm used.\
 ##### MaxRetries
 Datatype: `number`\
 Default: `5`\
-Determines the amount of times to retries when checking of ordered array fails.
+Determines the amount of times to try when checking of ordered array fails.
 
 ##### Checks
 Datatype: `boolean`\
