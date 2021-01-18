@@ -31,7 +31,7 @@ Skips `nil`, won't be added into returned list regardless of `IncludeNonSorted`.
 Datatype: `number`\
 Default: `1`\
 Determines the sorting algorithm used.\
-1 - Heap Sort
+1 - Heap Sort\
 2 - Insertion Sort
 
 ##### MaxRetries
