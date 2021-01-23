@@ -181,7 +181,7 @@ function module:Sort(t)
 			for k, _ in pairs(t) do
 				if type(k) == "number" then
 					table.insert(newArray, k)
-				else
+				elseif self.IncludeNonSorted then
 					if type(k) ~= "table" then
 						table.insert(miscArray, k)
 					else
@@ -193,7 +193,7 @@ function module:Sort(t)
 			for _, v in pairs(t) do
 				if type(v) == "number" then
 					table.insert(newArray, v)
-				else
+				elseif self.IncludeNonSorted then
 					if type(v) ~= "table" then
 						table.insert(miscArray, v)
 					else
@@ -206,7 +206,7 @@ function module:Sort(t)
 		for _, v in pairs(t) do
 			if type(v) == "number" then
 				table.insert(newArray, v)
-			else
+			elseif self.IncludeNonSorted then
 				if type(v) ~= "table" then
 					table.insert(miscArray, v)
 				else
