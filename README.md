@@ -1,10 +1,14 @@
 # Table_Sort
 For all your sorting needs of both arrays and dictionaries.
+Orientated for use within Roblox
 
 ## What is this?
 A Roblox module that has the functionality to sort both arrays and dictionaries.
 When sorting dictionaries, it would just return the ordered array for the values in the dictionary since dictionaries are unordered, unlike arrays.
 It currently features 2 sorting algorithms, **insertion sort** and **heap sort**.
+
+## Caveats
+- Unable to work with `nil` values.
 
 ## API
 ##### Module.new()
