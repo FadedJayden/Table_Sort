@@ -16,11 +16,13 @@ Creates and return a [SorterObj](https://github.com/FadedJayden/Table_Sort/blob/
 
 ##### Module.slice(a, s, e)
 ###### Parameters:
-	- a :: Array that is going to be sliced; no changes will be applied to the given array within the module
-	- s :: Starting index of slice
-	- e :: Ending index of slice
+- **a** :: Array that is going to be sliced; no changes will be applied to the given array within the module
+- **s** :: Starting index of slice
+- **e** :: Ending index of slice
+
 ###### Returns:
-	- The sliced array, starting from the `s` index and including the element at just 1 index before `e`.
+- The sliced array, starting from the `s` index and including the element at just 1 index before `e`.
+
 ###### Code samples:
 ```lua
 local sorter = require(script.Parent:WaitForChild("ModuleScript"))
