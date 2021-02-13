@@ -13,6 +13,23 @@ It currently features 2 sorting algorithms, **insertion sort** and **heap sort**
 ## API
 ##### Module.new()
 Creates and return a [SorterObj](https://github.com/FadedJayden/Table_Sort/blob/main/README.md#sorterobj).
+
+##### Module.slice(a, s, e)
+###### Parameters:
+	- a :: Array that is going to be sliced; no changes will be applied to the given array within the module
+	- s :: Starting index of slice
+	- e :: Ending index of slice
+###### Returns:
+	- The sliced array, starting from the `s` index and including the element at just 1 index before `e`.
+###### Code samples:
+```lua
+local sorter = require(script.Parent:WaitForChild("ModuleScript"))
+local array = {31, 4, 5, 13, 21, 6, 18}
+sorter.slice(array, 1, 2) -- {31}
+sorter.slice(array, 3, 5) -- {5, 13}
+```
+
+
 ## SorterObj
 A class object that handles [parameters](https://github.com/FadedJayden/Table_Sort#properties) when sorting.
 #### `:Sort(x)`
