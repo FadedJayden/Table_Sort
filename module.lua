@@ -9,6 +9,19 @@ local function flipArray(array)
 	
 	return newArray
 end
+
+-- {3, 5, 10, 8, 4, 11, 32, 7, 12}
+local function sliceArray(array, s, e) -- s = start, e = end; 4, 6:: returns: 8, 4, 11
+	local newArray = {}
+	local amt_of_items = e -s
+
+	for i = 1, amt_of_items  do
+		table.insert(newArray, array[s -1 +i])
+	end
+
+	return newArray
+end
+
 local function heapsort(array, ascend)
 	for index, item in pairs(array) do
 		local highest = {item, index}
@@ -33,6 +46,26 @@ local function heapsort(array, ascend)
 end
 
 local function insertionsort(array, ascend)
+	local newArray = {}
+	
+	for k1, x in pairs(array) do
+		local placement = len(newArray) +1
+		for k2, y in pairs(newArray) do
+			if x < y then
+				placement = k2
+				break
+			end
+		end
+		table.insert(newArray, placement, x)
+	end
+	if not ascend then
+		newArray = flipArray(newArray)
+	end
+
+    return newArray
+end
+
+local function insertionsort_deprecated(array, ascend)
 	local solidified = {}
 	for i, v in pairs(array) do
 		local found = false
@@ -55,6 +88,31 @@ local function insertionsort(array, ascend)
 
 	return solidified
 end
+
+--[[local function mergeSort(array, ascend)
+	local function main(array)
+		l = #array
+		if l > 2 then
+			local divide_factor = l//2
+			local a = sliceArray(array, 1, divide_factor +1)
+			local b = sliceArray(array, divide_factor +1, l +1)
+
+
+		elseif l == 2 then
+			re = 0
+			if array[1] < array[2] then
+				re = {array[1], array[2]}
+			else
+				re = {array[2], array}
+			end
+			array = nil
+			return re
+		elseif l == 1 then
+			return {array[1]}
+		end
+	end
+	-- recursion]]
+
 
 local function sortChannel(array, ascending, sortChoice)
 	local newArray = {}
