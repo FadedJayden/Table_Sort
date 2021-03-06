@@ -41,7 +41,10 @@ local function heapsort(a, ascend)
     	table.insert(newArray, highest)
     	array[HIndex] = nil
     end
-	
+
+    if ascend then
+    	newArray = flipArray(a)
+	end
 	return newArray
 end
 
@@ -58,10 +61,10 @@ local function insertionsort(array, ascend)
 		end
 		table.insert(newArray, placement, x)
 	end
+
 	if not ascend then
 		newArray = flipArray(newArray)
 	end
-
     return newArray
 end
 
@@ -140,6 +143,8 @@ local function sortChannel(array, ascending, sortChoice)
 		newArray = heapsort(array, ascending)
 	elseif sortChoice == 2 then
 		newArray = insertionsort(array, ascending)
+	elseif sortChoice == 3 then
+		newArray = bubblesort(array, ascending)
 	else
 		newArray = heapsort(array, ascending)
 	end
