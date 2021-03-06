@@ -22,34 +22,34 @@ local function sliceArray(array, s, e) -- s = start, e = end; 4, 6:: returns: 8,
 	return newArray
 end
 
-local function heapsort(array, ascend)
-	for index, item in pairs(array) do
-		local highest = {item, index}
-		for indexB, itemB in pairs(array) do
-			if indexB > index then
-				if ascend then
-					highest = itemB < highest[1] and {itemB, indexB} or highest
-				else
-					highest =  itemB > highest[1] and {itemB, indexB} or highest
-				end
-			end
-		end
-		if highest[2] ~= index then
-			table.remove(array, highest[2])
-			table.insert(array, highest[2], item)
-			table.remove(array, index)
-			table.insert(array, index, highest[1])
-		end
-	end
+local function heapsort(a, ascend)
+	local array = {}
+    for _, v in pairs(a) do
+        table.insert(array, v)
+    end
+    local newArray = {}
+
+    for i = 1, #a do
+    	local highest = -math.huge
+    	local HIndex = 0
+    	for index, item in pairs(array) do
+		    if item >= highest then
+    			highest = item
+    			HIndex = index
+    		end
+    	end
+    	table.insert(newArray, highest)
+    	array[HIndex] = nil
+    end
 	
-	return array
+	return newArray
 end
 
 local function insertionsort(array, ascend)
 	local newArray = {}
 	
 	for k1, x in pairs(array) do
-		local placement = len(newArray) +1
+		local placement = #(newArray) +1
 		for k2, y in pairs(newArray) do
 			if x < y then
 				placement = k2
@@ -63,6 +63,26 @@ local function insertionsort(array, ascend)
 	end
 
     return newArray
+end
+
+local function bubblesort(a, ascend)
+    local array = {}
+    for _, v in pairs(a) do
+        table.insert(array, v)
+    end
+    
+    for x = 1, #a do
+        for i = 1, #a -x do
+            if array[i] > array[i +1] then
+                array[i], array[i +1] = array[i +1], array[i]
+            end
+        end
+    end
+    
+    if not ascend then
+        array = flipArray(array)
+    end
+    return array
 end
 
 local function insertionsort_deprecated(array, ascend)
@@ -89,7 +109,7 @@ local function insertionsort_deprecated(array, ascend)
 	return solidified
 end
 
---[[local function mergeSort(array, ascend)
+local function mergeSort(array, ascend) -- not ready
 	local function main(array)
 		l = #array
 		if l > 2 then
