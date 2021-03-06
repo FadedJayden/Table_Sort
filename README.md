@@ -3,7 +3,8 @@ For all your sorting needs of both arrays and dictionaries.
 Orientated for use within Roblox
 
 ## What is this?
-A Roblox module that has the functionality to sort both arrays and dictionaries.
+A module meant for Roblox. No idea how it would work with vanilla lua.
+Has the functionality to sort both arrays and dictionaries.
 When sorting dictionaries, it would just return the ordered array for the values in the dictionary since dictionaries are unordered, unlike arrays.
 It currently features 2 sorting algorithms, **insertion sort** and **heap sort**.
 
@@ -36,8 +37,9 @@ Skips `nil`, won't be added into returned list regardless of `IncludeNonSorted`.
 Datatype: `number`\
 Default: `1`\
 Determines the sorting algorithm used.\
-1 - Heap Sort\
-2 - Insertion Sort
+1 - Heap Sort; Without the Heap Property\
+2 - Insertion Sort\
+3 - Bubble Sort
 
 ##### MaxRetries
 Datatype: `number`\
@@ -71,12 +73,27 @@ Datatype: `boolean`\
 Default: `false`\
 When set to true, it will pack all of the non numerical datatypes from the given list at the very end of the returned list.
 
-## Stats
+## Sorting Stats
+Took average time sorted from 100 samples.\
+Each list contained arbitrary numbers from `-100` to `100`.\
+Small List: 10 Items.\
+Medium List: 100 Items.\
+Big List: 1000 Items.
+
 **Algorithm 1; Heap Sort**
-- Avg time: 0.03131ms
+- Small List: 0.02533ms\
+- Medium List: 0.67227ms\
+- Big List: 57.64493ms
 
 **Algorithm 2; Insertion Sort**
-- Avg time: 0.03652ms
+- Small List: 0.01868ms\
+- Medium List: 0.43559ms\
+- Big List: 35.33016ms
+
+**Algorithm 3; Bubble Sort**
+- Small List: 0.01749ms\
+- Medium List: 0.62045ms\
+- Big List: 59.63287ms
 
 ## Code samples
 ```lua
